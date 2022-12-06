@@ -1,0 +1,13 @@
+
+  - name: Installation of the NTP
+    apt:
+      name: chrony
+      state: present
+      update_cache: yes
+
+  - name: Enable chrony
+    service:
+      name: chrony.service
+      state: restarted
+      enabled: yes
+
